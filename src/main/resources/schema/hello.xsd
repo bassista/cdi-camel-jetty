@@ -1,0 +1,55 @@
+<schema targetNamespace="http://apache.org/hello_world_soap_http/types"
+	xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://apache.org/hello_world_soap_http/types"
+	elementFormDefault="qualified">
+	<simpleType name="MyStringType">
+		<restriction base="string">
+			<maxLength value="30" />
+		</restriction>
+	</simpleType>
+
+	<element name="sayHi">
+		<complexType />
+	</element>
+	<element name="sayHiResponse">
+		<complexType>
+			<sequence>
+				<element name="responseType" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="greetMe">
+		<complexType>
+			<sequence>
+				<element name="requestType" type="tns:MyStringType" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="greetMeResponse">
+		<complexType>
+			<sequence>
+				<element name="responseType" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="greetMeOneWay">
+		<complexType>
+			<sequence>
+				<element name="requestType" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="pingMe">
+		<complexType />
+	</element>
+	<element name="pingMeResponse">
+		<complexType />
+	</element>
+	<element name="faultDetail">
+		<complexType>
+			<sequence>
+				<element name="minor" type="short" />
+				<element name="major" type="short" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

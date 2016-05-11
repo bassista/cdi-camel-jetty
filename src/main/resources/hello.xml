@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:per="http://apache.org/hello_world_soap_http" xmlns:types="http://apache.org/hello_world_soap_http/types">
+	<soapenv:Header />
+	<soapenv:Body>
+		<types:greetMe>
+			<types:requestType>Peter</types:requestType>
+		</types:greetMe>
+	</soapenv:Body>
+</soapenv:Envelope>
